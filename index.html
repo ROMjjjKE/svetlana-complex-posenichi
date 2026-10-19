@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Гостиничный комплекс «Светлана» — отель, кафе, банкетный зал | д. Посеничи, Пинский район</title>
+<meta name="description" content="Гостинично-развлекательный комплекс «Светлана»: современный отель на 20 номеров, уютное кафе с летней террасой, банкетный зал с караоке, охраняемая стоянка. д. Посеничи, 420-й км трассы М10. Тел +375 44 756-05-55.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --grn:#1C3A2A;        /* глубокий тёмно-зелёный */
+  --grn2:#274B36;       /* изумруд */
+  --cream:#F6F1E7;      /* тёплый кремовый фон */
+  --cream2:#EFE7D8;
+  --wood:#4A3A2C;       /* тёмное дерево */
+  --gold:#C2A265;       /* приглушённое золото */
+  --gold2:#AD8F55;
+  --ink:#2A2E2A;        /* основной текст */
+  --mut:#6E746C;
+  --line:rgba(28,58,42,.16);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Manrope',Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.18;letter-spacing:.01em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+::selection{background:var(--gold);color:#fff}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+/* шапка */
+header{position:fixed;top:0;left:0;right:0;z-index:900;transition:background .4s,box-shadow .4s}
+header.scrolled{background:rgba(28,58,42,.96);backdrop-filter:blur(10px);box-shadow:0 6px 30px rgba(0,0,0,.25)}
+.hrow{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:0 32px;max-width:1340px;margin:0 auto;min-height:88px;transition:min-height .35s}
+header.scrolled .hrow{min-height:68px}
+.logo{display:flex;flex-direction:column;line-height:1.15}
+.logo .lg-n{font-family:var(--serif);font-weight:700;font-size:30px;color:#fff;letter-spacing:.02em;transition:font-size .3s}
+header.scrolled .logo .lg-n{font-size:24px}
+.logo .lg-s{font-size:10.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-weight:600}
+nav.main{display:flex;gap:4px;flex-wrap:wrap;justify-content:center}
+nav.main a{font-size:13px;font-weight:500;letter-spacing:.05em;color:rgba(255,255,255,.85);padding:8px 11px;border-radius:6px;transition:color .3s,background .3s}
+nav.main a:hover{color:var(--gold)}
+.h-tel{display:flex;flex-direction:column;align-items:flex-end;flex:none}
+.h-tel a{font-family:var(--serif);font-weight:600;font-size:21px;color:#fff;white-space:nowrap;transition:color .3s}
+.h-tel a:hover{color:var(--gold)}
+.h-tel span{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.burger{display:none;background:none;border:1px solid rgba(255,255,255,.35);border-radius:8px;padding:10px 11px;cursor:pointer;flex:none}
+.burger span{display:block;width:21px;height:2px;background:#fff;margin:4px 0}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:
+  radial-gradient(120% 90% at 70% 20%, #2B5439 0%, transparent 55%),
+  radial-gradient(90% 80% at 20% 85%, #3A5540 0%, transparent 60%),
+  linear-gradient(160deg, #22452F 0%, #172E1F 55%, #101F16 100%);
+  will-change:transform}
+.hero-bg::after{content:'';position:absolute;inset:0;
+  background:
+   repeating-linear-gradient(115deg, rgba(255,255,255,.028) 0 2px, transparent 2px 26px),
+   repeating-linear-gradient(-35deg, rgba(0,0,0,.05) 0 2px, transparent 2px 34px)}
+.hero-mask{position:absolute;inset:0;background:linear-gradient(180deg, rgba(12,22,15,.55) 0%, rgba(12,22,15,.25) 40%, rgba(12,22,15,.78) 100%)}
+.hero-in{position:relative;z-index:2;padding:170px 0 120px;width:100%}
+.hero .ph-tag{position:absolute;right:6%;bottom:9%;z-index:2;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+.h-kick{display:inline-flex;align-items:center;gap:14px;font-size:12.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:26px}
+.h-kick::before{content:'';width:46px;height:1px;background:var(--gold)}
+.hero h1{font-size:clamp(38px,6.4vw,84px);font-weight:600;max-width:900px}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.h-sub{font-size:clamp(16px,1.8vw,21px);color:rgba(255,255,255,.86);max-width:720px;margin-top:22px;font-weight:400}
+.h-cta{display:flex;gap:16px;margin-top:44px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-weight:600;font-size:15px;letter-spacing:.04em;padding:16px 34px;border-radius:2px;transition:all .35s ease-out;cursor:pointer;border:none}
+.btn-gold{background:var(--gold);color:#1C2A20}
+.btn-gold:hover{background:#D4B878;transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.3)}
+.btn-out{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.55)}
+.btn-out:hover{border-color:var(--gold);color:var(--gold)}
+.btn-grn{background:var(--grn);color:#fff}
+.btn-grn:hover{background:var(--grn2);transform:translateY(-2px)}
+/* секции */
+section.sec{padding:110px 0}
+.kick{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold2);font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:14px}
+.kick::before{content:'';width:44px;height:1px;background:var(--gold2)}
+h2.sec-t{font-size:clamp(30px,4vw,52px);color:var(--grn)}
+h2.sec-t em{font-style:italic;color:var(--gold2)}
+.lead{font-size:18.5px;color:#4A514A;max-width:780px;margin-top:18px;font-weight:400}
+/* reveal */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .6s ease-out,transform .6s ease-out}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
+/* о комплексе */
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;margin-top:10px}
+.about-txt p{font-size:17.5px;color:#4A514A}
+.about-txt p+p{margin-top:14px}
+.about-quote{font-family:var(--serif);font-size:24px;line-height:1.5;color:var(--grn);font-style:italic;border-left:2px solid var(--gold);padding-left:26px;margin:26px 0 4px}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px}
+.pcard{background:#fff;border:1px solid var(--line);border-radius:4px;padding:38px 30px;text-align:center;transition:transform .4s ease-out,box-shadow .4s ease-out,border-color .3s}
+.pcard:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(28,58,42,.14);border-color:rgba(194,162,101,.55)}
+.pcard .ic{width:56px;height:56px;margin:0 auto 18px;border-radius:50%;background:rgba(194,162,101,.16);display:flex;align-items:center;justify-content:center;color:var(--gold2)}
+.pcard h3{font-size:24px;color:var(--grn);margin-bottom:8px}
+.pcard p{font-size:14.5px;color:var(--mut)}
+/* плейсхолдеры фото */
+.ph{position:relative;border-radius:4px;overflow:hidden;display:flex;align-items:flex-end;min-height:300px;
+  background:
+   radial-gradient(120% 100% at 75% 15%, rgba(194,162,101,.24) 0%, transparent 55%),
+   radial-gradient(90% 90% at 15% 90%, rgba(74,58,44,.38) 0%, transparent 60%),
+   linear-gradient(155deg, #2E5A3E 0%, #1C3A2A 60%, #142A1D 100%);
+  box-shadow:0 30px 60px rgba(28,58,42,.22)}
+.ph::before{content:'';position:absolute;inset:0;
+  background:
+   repeating-linear-gradient(115deg, rgba(255,255,255,.03) 0 2px, transparent 2px 30px),
+   repeating-linear-gradient(-35deg, rgba(0,0,0,.05) 0 2px, transparent 2px 42px)}
+.ph::after{content:'';position:absolute;left:0;right:0;bottom:0;height:45%;background:linear-gradient(180deg,transparent,rgba(10,18,12,.5))}
+.ph .ph-tag{position:relative;z-index:2;display:flex;align-items:center;gap:12px;padding:20px 24px;width:100%;color:rgba(255,255,255,.82);font-size:11.5px;letter-spacing:.26em;text-transform:uppercase;font-weight:600}
+.ph .ph-tag::before{content:'▦';font-size:15px;color:var(--gold);letter-spacing:0}
+.ph .ph-cap{position:absolute;top:20px;left:22px;z-index:2;font-family:var(--serif);font-style:italic;font-size:19px;color:rgba(255,255,255,.75)}
+/* секция-сплит */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.split.rev .s-txt{order:2}
+.s-txt .kick{margin-bottom:14px}
+.s-txt h2{font-size:clamp(28px,3.6vw,44px);color:var(--grn)}
+.s-txt .lead{margin-top:14px}
+.s-facts{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.fact{display:flex;flex-direction:column;gap:2px;border:1px solid var(--line);background:#fff;border-radius:3px;padding:14px 20px;min-width:150px}
+.fact b{font-family:var(--serif);font-size:26px;font-weight:700;color:var(--gold2);line-height:1.1}
+.fact span{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+.s-cta{margin-top:28px}
+.s-tel{display:inline-flex;align-items:baseline;gap:10px;margin-top:20px}
+.s-tel .tl{font-family:var(--serif);font-weight:700;font-size:27px;color:var(--grn);border-bottom:1px solid var(--gold2);transition:color .3s}
+.s-tel .tl:hover{color:var(--gold2)}
+.s-tel .tc{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut)}
+/* тёмные секции */
+section.dark{background:var(--grn);color:#fff}
+section.dark .kick{color:var(--gold)}
+section.dark .kick::before{background:var(--gold)}
+section.dark h2.sec-t{color:#fff}
+section.dark h2.sec-t em{color:var(--gold)}
+section.dark .lead{color:rgba(255,255,255,.8)}
+.dark .ph{box-shadow:0 30px 60px rgba(0,0,0,.4)}
+/* отзывы */
+.rev-form{max-width:640px;margin-top:38px;display:grid;gap:14px}
+.rev-form label{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);font-weight:600;display:block;margin-bottom:6px}
+.rev-form input,.rev-form textarea{width:100%;background:#fff;border:1px solid var(--line);border-radius:3px;padding:14px 16px;font-family:var(--sans);font-size:16px;color:var(--ink);transition:border-color .3s}
+.rev-form input:focus,.rev-form textarea:focus{outline:none;border-color:var(--gold2)}
+.okmsg{display:none;background:rgba(39,75,54,.1);border:1px solid rgba(39,75,54,.35);color:var(--grn);border-radius:3px;padding:15px 18px;font-size:15.5px;font-weight:600}
+.err{border-color:#B0503C!important}
+/* контакты */
+.contacts-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;margin-top:56px}
+.c-item{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.c-item .ci{flex:none;width:46px;height:46px;border-radius:50%;border:1px solid rgba(194,162,101,.5);display:flex;align-items:center;justify-content:center;color:var(--gold)}
+.c-item .cl{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:600;margin-bottom:5px}
+.c-item .cv{font-family:var(--serif);font-size:22px;font-weight:600;color:#fff;line-height:1.35}
+.c-item .cv a{border-bottom:1px solid rgba(194,162,101,.5);transition:color .3s}
+.c-item .cv a:hover{color:var(--gold)}
+.c-item .cv small{display:block;font-family:var(--sans);font-size:12.5px;font-weight:400;color:rgba(255,255,255,.55);margin-top:4px}
+.socials{display:flex;gap:12px;margin-top:30px}
+.socials a{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center;color:#fff;transition:all .3s ease-out}
+.socials a:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-3px)}
+.disclaimer{margin-top:44px;padding:16px 20px;border:1px solid rgba(255,255,255,.2);border-radius:3px;font-size:13px;color:rgba(255,255,255,.55);display:flex;gap:12px;align-items:flex-start}
+.disclaimer svg{flex:none;margin-top:2px;color:var(--gold)}
+.callform{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:4px;padding:36px}
+.callform h3{font-size:27px;color:#fff;margin-bottom:8px}
+.callform p{font-size:14px;color:rgba(255,255,255,.65);margin-bottom:22px}
+.callform label{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.55);font-weight:600;display:block;margin-bottom:6px}
+.callform input{width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:3px;padding:14px 16px;font-family:var(--sans);font-size:16px;color:#fff;transition:border-color .3s}
+.callform input::placeholder{color:rgba(255,255,255,.4)}
+.callform input:focus{outline:none;border-color:var(--gold)}
+.callform .okmsg{background:rgba(194,162,101,.18);border-color:rgba(194,162,101,.5);color:var(--gold)}
+/* футер */
+footer{background:#122318;color:rgba(255,255,255,.6);padding:56px 0 46px;font-size:14.5px}
+.ft{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:center}
+.ft .ft-logo{font-family:var(--serif);font-weight:700;font-size:30px;color:#fff}
+.ft .ft-logo i{font-style:italic;color:var(--gold)}
+.ft-r{text-align:right;display:flex;flex-direction:column;gap:4px}
+.ft-r a{color:rgba(255,255,255,.85);transition:color .3s}
+.ft-r a:hover{color:var(--gold)}
+.wm-line{border-top:1px solid rgba(255,255,255,.12);margin-top:34px;padding-top:22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12.5px}
+/* моб. меню */
+.mnav{position:fixed;inset:0;z-index:950;background:rgba(28,58,42,.98);display:none;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+.mnav.on{display:flex}
+.mnav a{font-family:var(--serif);font-size:28px;color:#fff;padding:7px 0}
+.mnav .m-tel{font-family:var(--sans);font-size:16px;color:var(--gold);letter-spacing:.1em;margin-top:18px}
+.mnav .m-x{position:absolute;top:24px;right:26px;background:none;border:none;color:#fff;font-size:34px;cursor:pointer}
+@media(max-width:1120px){nav.main{display:none}.burger{display:block}.h-tel{display:none}.hrow{min-height:74px}.logo .lg-n{font-size:25px}}
+@media(max-width:900px){.about-grid,.split,.contacts-grid{grid-template-columns:1fr;gap:40px}.split.rev .s-txt{order:0}.cards3{grid-template-columns:1fr}.ph{min-height:250px}}
+@media(max-width:600px){section.sec{padding:72px 0}.hero h1{font-size:40px}.h-cta .btn{width:100%}.callform{padding:26px}.c-item .cv{font-size:19px}.ft-r{text-align:left}}
+</style>
+</head>
+<body>
+<header id="hdr">
+  <div class="hrow">
+    <a href="#" class="logo" aria-label="Светлана">
+      <span class="lg-n">Светлана</span>
+      <span class="lg-s">Гостиничный комплекс</span>
+    </a>
+    <nav class="main" aria-label="Основное меню">
+      <a href="#about">О комплексе</a>
+      <a href="#cafe">Кафе</a>
+      <a href="#hotel">Гостиница</a>
+      <a href="#banquet">Банкетный зал</a>
+      <a href="#parking">Паркинг</a>
+      <a href="#lounge">Лаундж</a>
+      <a href="#spa">SPA</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="h-tel">
+      <a href="tel:+375447560555">+375 44 756-05-55</a>
+      <span>Пн–Вс 07:00–01:00</span>
+    </div>
+    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mnav" id="mnav">
+  <button class="m-x" id="mclose" aria-label="Закрыть">×</button>
+  <a href="#about">О комплексе</a>
+  <a href="#cafe">Кафе</a>
+  <a href="#hotel">Гостиница</a>
+  <a href="#banquet">Банкетный зал</a>
+  <a href="#parking">Паркинг</a>
+  <a href="#lounge">Лаундж</a>
+  <a href="#spa">SPA</a>
+  <a href="#reviews">Отзывы</a>
+  <a href="#contacts">Контакты</a>
+  <div class="m-tel"><a href="tel:+375447560555">+375 44 756-05-55</a></div>
+</div>
+
+<section class="hero" id="top">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-mask"></div>
+  <div class="wrap hero-in">
+    <div class="h-kick">Д. Посеничи · Пинский район · 420-й км трассы М10</div>
+    <h1>Гостиничный комплекс <em>«Светлана»</em></h1>
+    <p class="h-sub">Многофункциональный центр: современный отель, уютное кафе с летней террасой, банкетный зал с караоке, охраняемая стоянка.</p>
+    <div class="h-cta">
+      <a href="#contacts" class="btn btn-gold">Узнать наличие свободных номеров</a>
+      <a href="#contacts" class="btn btn-out">Забронировать стол</a>
+    </div>
+  </div>
+  <div class="ph-tag">фото: главный фасад комплекса</div>
+</section>
+<section class="sec" id="about">
+<div class="wrap">
+  <div class="about-grid">
+    <div class="about-txt rv">
+      <div class="kick">О комплексе</div>
+      <h2 class="sec-t">Добро пожаловать в гостинично-развлекательный <em>комплекс «Светлана»</em></h2>
+      <p class="about-quote">«Для вас работает многофункциональный центр, который включает в себя современный отель, уютное кафе с летней террасой, банкетный зал с караоке, охраняемую стоянку для транспортных средств всех модификаций».</p>
+      <p>Это идеальное место как для ночлега в пути и спокойного отдыха, так и для проведения свадебных торжеств и корпоративных мероприятий.</p>
+    </div>
+    <div class="ph rv d1" style="min-height:380px" role="img" aria-label="Фото-плейсхолдер: территория комплекса">
+      <div class="ph-cap">Территория комплекса</div>
+      <div class="ph-tag">фото: территория комплекса</div>
+    </div>
+  </div>
+  <div class="cards3">
+    <div class="pcard rv"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11 l9-7 9 7 v10 H3 z M9 21 v-7 h6 v7"/></svg></div><h3>Чистота, уют, комфорт</h3><p>Атмосфера, в которой хочется остаться: от номеров до банкетного зала.</p></div>
+    <div class="pcard rv d1"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21 q0-8 8-8 t8 8"/></svg></div><h3>Квалифицированный персонал</h3><p>Команда комплекса позаботится о том, чтобы всё прошло на высоте.</p></div>
+    <div class="pcard rv d2"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7 v10 M9.5 9.5 h4 a2 2 0 0 1 0 4 h-3 a2 2 0 0 0 0 4 h4.5"/></svg></div><h3>Приятные лояльные цены</h3><p>Разумная стоимость ночлега, кухни и торжеств — без переплат.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="sec" id="cafe" style="background:#fff">
+<div class="wrap split">
+  <div class="ph rv" style="min-height:340px" role="img" aria-label="Фото-плейсхолдер: кафе с летней террасой">
+    <div class="ph-cap">Летняя терраса кафе</div>
+    <div class="ph-tag">фото: кафе с летней террасой</div>
+  </div>
+  <div class="s-txt rv d1">
+    <div class="kick">Кафе</div>
+    <h2>Кафе «Светлана»: <em style="font-style:italic">блюда на любой вкус</em></h2>
+    <p class="lead">Кафе «Светлана» предлагает блюда на любой вкус — как традиционной национальной кухни, так и блюда разных народов мира. В тёплое время года для гостей открыта летняя терраса.</p>
+    <div class="s-facts">
+      <div class="fact"><b>07:00–24:00</b><span>часы работы кафе</span></div>
+      <div class="fact"><b>Летняя терраса</b><span>в тёплый сезон</span></div>
+    </div>
+    <div class="s-tel"><a class="tl" href="tel:+375299993948">+375 29 999-39-48</a><span class="tc">телефон кафе</span></div>
+  </div>
+</div>
+</section>
+
+<section class="sec dark" id="hotel">
+<div class="wrap split rev">
+  <div class="s-txt rv">
+    <div class="kick">Гостиница</div>
+    <h2 style="color:#fff;font-size:clamp(28px,3.6vw,44px)">Современный отель <em style="font-style:italic;color:var(--gold)">на 20 номеров</em></h2>
+    <p class="lead">В гостинице «Светлана» к вашему удобству предлагается 20 номеров различной ценовой категории и на любой вкус.</p>
+    <div class="s-facts">
+      <div class="fact" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2)"><b>20</b><span>номеров к вашим услугам</span></div>
+      <div class="fact" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2)"><b>Ночлег в пути</b><span>спокойный отдых на трассе М10</span></div>
+    </div>
+    <div class="s-cta"><a href="#contacts" class="btn btn-gold">Узнать наличие свободных номеров</a></div>
+  </div>
+  <div class="ph rv d1" style="min-height:340px" role="img" aria-label="Фото-плейсхолдер: гостиничный номер">
+    <div class="ph-cap">Гостиничный номер</div>
+    <div class="ph-tag">фото: номер отеля</div>
+  </div>
+</div>
+</section>
+
+<section class="sec" id="banquet" style="background:#fff">
+<div class="wrap split">
+  <div class="ph rv" style="min-height:340px" role="img" aria-label="Фото-плейсхолдер: банкетный зал">
+    <div class="ph-cap">Банкетный зал</div>
+    <div class="ph-tag">фото: банкетный зал</div>
+  </div>
+  <div class="s-txt rv d1">
+    <div class="kick">Банкетный зал</div>
+    <h2>Уютный банкетный зал <em style="font-style:italic">на 24 посадочных места</em></h2>
+    <p class="lead">Для торжественных случаев в комплексе работает уютный банкетный зал на 24 посадочных места с караоке.</p>
+    <div class="s-facts">
+      <div class="fact"><b>24</b><span>посадочных места</span></div>
+      <div class="fact"><b>Караоке</b><span>в банкетном зале</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="sec" id="parking">
+<div class="wrap split rev">
+  <div class="s-txt rv">
+    <div class="kick">Паркинг</div>
+    <h2>Охраняемая стоянка <em style="font-style:italic">для транспорта любых габаритов</em></h2>
+    <p class="lead">Первоклассный сервис по временному размещению транспортных средств всех модификаций и любых габаритов. Охраняемая стоянка комплекса работает для гостей отеля, кафе и банкетного зала.</p>
+    <div class="s-facts">
+      <div class="fact"><b>Охрана</b><span>безопасность на стоянке</span></div>
+      <div class="fact"><b>Все модификации</b><span>и любые габариты</span></div>
+    </div>
+  </div>
+  <div class="ph rv d1" style="min-height:340px" role="img" aria-label="Фото-плейсхолдер: охраняемая стоянка">
+    <div class="ph-cap">Охраняемая стоянка</div>
+    <div class="ph-tag">фото: паркинг</div>
+  </div>
+</div>
+</section>
+<section class="sec dark" id="lounge">
+<div class="wrap split">
+  <div class="ph rv" style="min-height:340px" role="img" aria-label="Фото-плейсхолдер: лаундж">
+    <div class="ph-cap">Светлана Лаундж</div>
+    <div class="ph-tag">фото: лаундж</div>
+  </div>
+  <div class="s-txt rv d1">
+    <div class="kick">Светлана Лаундж</div>
+    <h2 style="color:#fff;font-size:clamp(28px,3.6vw,44px)">От детских праздников <em style="font-style:italic;color:var(--gold)">до свадебных торжеств и корпоративов</em></h2>
+    <p class="lead">«Светлана Лаундж» — пространство для ваших событий: детский праздник, семейное торжество, свадьба или корпоратив.</p>
+    <div class="s-tel"><a class="tl" style="color:#fff;border-bottom-color:var(--gold)" href="tel:+375447560555">+375 44 756-05-55</a><span class="tc" style="color:rgba(255,255,255,.5)">гостиница · лаундж · SPA</span></div>
+  </div>
+</div>
+</section>
+
+<section class="sec" id="spa" style="background:#fff">
+<div class="wrap split rev">
+  <div class="s-txt rv">
+    <div class="kick">SPA</div>
+    <h2>SPA-услуги <em style="font-style:italic">комплекса «Светлана»</em></h2>
+    <p class="lead">Отдых для тела и души: SPA-услуги гостинично-развлекательного комплекса «Светлана» — во время отпуска, после дороги или к торжественному дню.</p>
+    <div class="s-tel"><a class="tl" href="tel:+375447560555">+375 44 756-05-55</a><span class="tc">запись: гостиница · лаундж · SPA</span></div>
+  </div>
+  <div class="ph rv d1" style="min-height:340px" role="img" aria-label="Фото-плейсхолдер: SPA">
+    <div class="ph-cap">SPA-зона</div>
+    <div class="ph-tag">фото: SPA</div>
+  </div>
+</div>
+</section>
+
+<section class="sec" id="decor">
+<div class="wrap split">
+  <div class="ph rv" style="min-height:340px" role="img" aria-label="Фото-плейсхолдер: декоративное оформление зала">
+    <div class="ph-cap">Свадебный декор</div>
+    <div class="ph-tag">фото: декор зала</div>
+  </div>
+  <div class="s-txt rv d1">
+    <div class="kick">Декоративное оформление зала</div>
+    <h2>Ваша сказка — <em style="font-style:italic">вашей индивидуальной атмосферой</em></h2>
+    <p class="lead">Наш профессиональный свадебный декор (оформление залов) создаст Вашу сказку, Вашу индивидуальную атмосферу, передаст стиль и настроение.</p>
+    <div class="s-cta"><a href="#contacts" class="btn btn-grn">Обсудить оформление</a></div>
+  </div>
+</div>
+</section>
+
+<section class="sec" id="reviews" style="background:var(--cream2)">
+<div class="wrap">
+  <div class="kick">Отзывы</div>
+  <h2 class="sec-t">Оставить отзыв, <em style="font-style:italic">заполнить анкету</em></h2>
+  <form class="rev-form" id="revForm" novalidate>
+    <div class="rv">
+      <label for="rv-name">Ваше имя</label>
+      <input id="rv-name" placeholder="Как к вам обращаться">
+    </div>
+    <div class="rv d1">
+      <label for="rv-txt">Отзыв</label>
+      <textarea id="rv-txt" rows="5" placeholder="Поделитесь впечатлениями о комплексе «Светлана»..."></textarea>
+    </div>
+    <div class="rv d2"><button class="btn btn-grn" type="submit">Написать</button></div>
+    <div class="okmsg" id="revOk">Спасибо за отзыв! Он поможет нам становиться лучше.</div>
+  </form>
+</div>
+</section>
+
+<section class="sec dark" id="contacts">
+<div class="wrap">
+  <div class="kick">Контакты</div>
+  <h2 class="sec-t">Будем рады видеть вас <em style="font-style:italic">в «Светлане»</em></h2>
+  <div class="contacts-grid">
+    <div class="rv">
+      <div class="c-item">
+        <div class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21 q-7-6-9-11 a9 5 0 0 1 18 0 q-2 5-9 11z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
+        <div><div class="cl">Адрес</div><div class="cv">Республика Беларусь, д. Посеничи,<br>Пинский р-н, Брестская обл., 420-й км трассы М10<small>GPS: N 52.177131, E 26.058800</small></div></div>
+      </div>
+      <div class="c-item">
+        <div class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 4 h4 l2 5 -2.5 1.5 a12 12 0 0 0 5 5 L15 13 l5 2 v4 a2 2 0 0 1 -2 2 C10 21 3 14 3 6 a2 2 0 0 1 2 -2z"/></svg></div>
+        <div><div class="cl">Телефоны</div><div class="cv">
+          <a href="tel:+375447560555">+375 44 756-05-55</a><small>гостиница, лаундж, SPA</small>
+          <a href="tel:+375299993948" style="display:inline-block;margin-top:8px">+375 29 999-39-48</a><small>кафе, 07:00–24:00</small>
+          <a href="tel:+375165672829" style="display:inline-block;margin-top:8px">+375 165 67-28-29</a>
+        </div></div>
+      </div>
+      <div class="c-item">
+        <div class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7 l9 6 9-6"/></svg></div>
+        <div><div class="cl">E-mail</div><div class="cv"><a href="mailto:svetlana-complex@mail.ru">svetlana-complex@mail.ru</a></div></div>
+      </div>
+      <div class="c-item">
+        <div class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7 v5 l3 3"/></svg></div>
+        <div><div class="cl">Время работы</div><div class="cv">Пн–Вс 07:00–01:00<small>кафе: 07:00–24:00</small></div></div>
+      </div>
+      <div class="socials">
+        <a href="#" aria-label="Facebook" title="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V5h-3a4 4 0 0 0-4 4v2H7v3h3v7h3v-7h3l1-3h-4V9a1 1 0 0 1 1-1z"/></svg></a>
+        <a href="#" aria-label="Instagram" title="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="Одноклассники" title="Одноклассники"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm0 2.6a1.9 1.9 0 1 1 0 3.8 1.9 1.9 0 0 1 0-3.8zM6 13.7l2 2a5.5 5.5 0 0 0 8 0l2-2-1.4-1.4-2 2a3.5 3.5 0 0 1-5.2 0l-2-2z"/></svg></a>
+        <a href="#" aria-label="ВКонтакте" title="ВКонтакте"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.8 16.9c-5.2 0-8.6-3.7-8.8-9.6h2.7c.1 4.4 2.2 6.3 3.7 6.7V7.3h2.6v3.9c1.5-.2 3-1.8 3.6-3.9h2.6c-.4 2.4-2 4-3.1 4.7 1.1.5 2.9 2 3.6 4.9h-2.9c-.5-1.7-1.9-3-3.8-3.2v3.2z"/></svg></a>
+        <a href="#" aria-label="Яндекс" title="Яндекс"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13.6 3h-2.9c-.2 3.4-1.9 5.6-4.2 6.6v2.5h2.5v6.1c0 1.6 1.1 2.8 3 2.8 2 0 2.8-.9 2.8-.9v-2s-.5.5-1.4.5c-.8 0-1.1-.5-1.1-1.4v-5.1h2.9v-2.5h-2.9V3z"/></svg></a>
+      </div>
+      <div class="disclaimer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3 L21 20 H3 z M12 10 v5 M12 18 v.5"/></svg>
+        <span>Внимание! На всей территории гостиничного комплекса «Светлана» ведётся видеонаблюдение с аудиофиксацией.</span>
+      </div>
+    </div>
+    <div class="callform rv d1">
+      <h3>Обратный звонок</h3>
+      <p>Оставьте имя и телефон — перезвоним и ответим на вопросы о номерах, столиках и торжествах.</p>
+      <form id="callForm" novalidate>
+        <div style="margin-bottom:14px"><label for="cf-name">Ваше имя</label><input id="cf-name" placeholder="Имя"></div>
+        <div style="margin-bottom:20px"><label for="cf-tel">Телефон</label><input id="cf-tel" placeholder="+375 __ ___-__-__"></div>
+        <button class="btn btn-gold" type="submit" style="width:100%">Перезвоните мне</button>
+        <div class="okmsg" id="callOk" style="margin-top:14px">Спасибо! Мы перезвоним вам в ближайшее время.</div>
+      </form>
+    </div>
+  </div>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+  <div class="ft">
+    <div class="ft-logo">Светлана <i>· гостиничный комплекс</i></div>
+    <div class="ft-r">
+      <a href="tel:+375447560555">+375 44 756-05-55</a>
+      <a href="mailto:svetlana-complex@mail.ru">svetlana-complex@mail.ru</a>
+    </div>
+  </div>
+  <div class="wm-line">
+    <span>© Гостиничный комплекс «Светлана» · д. Посеничи, Пинский р-н, Брестская обл., 420-й км трассы М10</span>
+    <span>Макет подготовлен SiteFast.by</span>
+  </div>
+</div>
+</footer>
+<script>
+(function(){
+  /* sticky-шапка */
+  var hdr=document.getElementById('hdr');
+  function onScroll(){
+    if(window.scrollY>40) hdr.classList.add('scrolled'); else hdr.classList.remove('scrolled');
+    /* лёгкий параллакс hero */
+    var bg=document.getElementById('heroBg');
+    if(bg){
+      var y=Math.min(window.scrollY, window.innerHeight||800);
+      bg.style.transform='translateY('+(y*.25)+'px)';
+    }
+  }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  /* мобильное меню */
+  var mnav=document.getElementById('mnav');
+  document.getElementById('burger').addEventListener('click',function(){mnav.classList.add('on')});
+  document.getElementById('mclose').addEventListener('click',function(){mnav.classList.remove('on')});
+  var ma=mnav.querySelectorAll('a');
+  for(var i=0;i<ma.length;i++){(function(a){a.addEventListener('click',function(){mnav.classList.remove('on')})})(ma[i]);}
+  /* reveal на IntersectionObserver */
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      for(var i=0;i<entries.length;i++){
+        if(entries[i].isIntersecting){
+          entries[i].target.classList.add('in');
+          io.unobserve(entries[i].target);
+        }
+      }
+    },{threshold:.14,rootMargin:'0px 0px -36px 0px'});
+    var rv=document.querySelectorAll('.rv');
+    for(var j=0;j<rv.length;j++){io.observe(rv[j]);}
+  } else {
+    var rv2=document.querySelectorAll('.rv');
+    for(var k=0;k<rv2.length;k++){rv2[k].classList.add('in');}
+  }
+  /* форма обратного звонка */
+  var cf=document.getElementById('callForm');
+  if(cf){
+    cf.addEventListener('submit',function(e){
+      e.preventDefault();
+      var nm=document.getElementById('cf-name'), tl=document.getElementById('cf-tel'), ok=true;
+      if(!nm.value.trim()){nm.classList.add('err');ok=false}else nm.classList.remove('err');
+      var digits=tl.value.replace(/\D/g,'');
+      if(digits.length<9){tl.classList.add('err');ok=false}else tl.classList.remove('err');
+      if(!ok) return;
+      document.getElementById('callOk').style.display='block';
+      cf.reset();
+      setTimeout(function(){document.getElementById('callOk').style.display='none';},6000);
+    });
+  }
+  /* форма отзыва */
+  var rf=document.getElementById('revForm');
+  if(rf){
+    rf.addEventListener('submit',function(e){
+      e.preventDefault();
+      var nm=document.getElementById('rv-name'), tx=document.getElementById('rv-txt'), ok=true;
+      if(!nm.value.trim()){nm.classList.add('err');ok=false}else nm.classList.remove('err');
+      if(!tx.value.trim()){tx.classList.add('err');ok=false}else tx.classList.remove('err');
+      if(!ok) return;
+      document.getElementById('revOk').style.display='block';
+      rf.reset();
+      setTimeout(function(){document.getElementById('revOk').style.display='none';},6000);
+    });
+  }
+  /* самодиагностика */
+  window.__ok=1;
+})();
+</script>
+</body>
+</html>
